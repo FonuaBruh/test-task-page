@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--color-primary: #272A33;
+	--color-secondary: #EE753E;
+}
+
+.container {
+	width: 100%;
+	max-width: 1440px;
+	margin: 0 240px;
+}
+
+.button {
+	font-family: "Open Sans", sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 1.45;
+	color: white;
+	background-color: var(--color-primary);
+	border: none;
+	border-radius: 8px;
+	padding: 8px 30px 12px 30px;
+	cursor: pointer;
+	align-self: flex-start;
+	transition: all 0.4s ease;
+}
+
+.button:hover {
+	background-color: var(--color-secondary);
+}
+
+.button--catalog {
+	align-self: center;
+	margin-top: 30px;
+}
+
+h1 {
+	font-family: "Roboto", sans-serif;
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 1.35;
+	text-transform: uppercase;
+	color: var(--color-primary);
+}
+
+/* HEADER */
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header__logo {
+	width: 210px;
+	height: 80px;
+}
+
+.header__logo img {
+	padding: 21px 30px 21px 0;
+	cursor: pointer;
+}
+
+.header__nav {
+	display: flex;
+	gap: 80px;
+	list-style-type: none;
+}
+
+.header__nav-link {
+	font-family: "Open Sans", sans-serif;
+	font-size: 16px;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: var(--color-primary);
+}
+
+.header__nav-link:hover {
+	color: var(--color-secondary);
+}
+
+/* RECOMMENDED */
+.recommended {
+	padding-top: 80px;
+	display: flex;
+	flex-direction: column;
+}
+
+.recommended__container {
+	padding-top: 30px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 30px;
+}
+
+.recommended__card {
+	width: 705px;
+}
+
+/* CARD */
+.card {
+	position: relative;
+	display: flex;
+	border-radius: 8px;
+}
+
+.card__image {
+	width: 220px;
+	height: 220px;
+	background-color: #EEF3F8;
+	border-radius: 8px;
+	flex-shrink: 0;
+	z-index: 1;
+}
+
+.card__image img {
+	width: 260px;
+	height: 260px;
+	padding-right: 40px;
+	padding-top: 5px;
+	object-fit: cover;
+}
+
+.card__content {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	padding: 31px 30px;
+	position: relative;
+	flex-grow: 1;
+}
+
+.card__content button {
+	margin-top: 3px;
+	cursor: pointer;
+}
+
+.card__content button:hover {
+	background-color: var(--color-secondary);
+}
+
+.card__title {
+	font-family: "Roboto", sans-serif;
+	font-size: 18px;
+	line-height: 1.2;
+	height: 66px;
+}
+
+.card__border {
+	position: absolute;
+	inset: 0;
+	border: 1px solid #E0E6ED;
+	border-radius: 0px 8px 8px 0px;
+	left: -10px;
+	border-left: none;
+	pointer-events: none;
+}
+
+/* AVAILABILITY */
+.availability {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.availability__image {
+	width: 14px;
+	height: 14px;
+}
+
+.availability__text {
+	font-family: "Open Sans", sans-serif;
+	font-size: 16px;
+	line-height: 1.45;
+}
+
+/* ABOUT */
+.about {
+	padding-top: 4px;
+	padding-bottom: 50px;
+}
+
+.about__container {
+	padding-top: 30px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 30px;
+}
+
+.about__images {
+	display: grid;
+	grid-template-areas:
+		"large large"
+		"small1 small2";
+	gap: 30px;
+	width: 705px;
+}
+
+.about__image {
+	border-radius: 8px;
+	width: 100%;
+	object-fit: cover;
+}
+
+.about__image--large {
+	grid-area: large;
+	max-height: 202px;
+}
+
+.about__image--small {
+	max-height: 162px;
+}
+
+.about__text-block {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	width: 705px;
+}
+
+.about__text {
+	font-family: "Open Sans", sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	color: var(--color-primary);
+}
+
+.about__text--bold {
+	font-weight: 700;
+}
+
+.about__text--default {
+	font-weight: 400;
+}
+
+.about__mark {
+	display: flex;
+	align-items: center;
+	font-family: "Open Sans", sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+.about__mark img {
+	margin-right: 15px;
+	width: 24px;
+	height: 24px;
+}
+
+.about__text-block button {
+	margin-top: 10px;
+}
